@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="false" version="1">
+  <includeClasses>
+    <classEntry path="br.com.stimuli.loading.BulkLoader"/>
+    <classEntry path="br.com.stimuli.loading.BulkProgressEvent"/>
+    <classEntry path="br.com.stimuli.loading.lazyloaders.LazyBulkLoader"/>
+    <classEntry path="br.com.stimuli.loading.lazyloaders.LazyJSONLoader"/>
+    <classEntry path="br.com.stimuli.loading.lazyloaders.LazyXMLLoader"/>
+    <classEntry path="br.com.stimuli.loading.loadingtypes.BinaryItem"/>
+    <classEntry path="br.com.stimuli.loading.loadingtypes.ImageItem"/>
+    <classEntry path="br.com.stimuli.loading.loadingtypes.JSONItem"/>
+    <classEntry path="br.com.stimuli.loading.loadingtypes.LoadingItem"/>
+    <classEntry path="br.com.stimuli.loading.loadingtypes.SoundItem"/>
+    <classEntry path="br.com.stimuli.loading.loadingtypes.URLItem"/>
+    <classEntry path="br.com.stimuli.loading.loadingtypes.VideoItem"/>
+    <classEntry path="br.com.stimuli.loading.loadingtypes.XMLItem"/>
+    <classEntry path="br.com.stimuli.loading.utils.SmartURL"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

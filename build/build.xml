@@ -1,0 +1,26 @@
+<project name="bulkloader" basedir=".">
+
+	<property file="build.properties" /> 
+
+	<!-- needed by build-common-tasks.xml -->
+	<property file="common/build-common.properties"/>
+	<property file="common/build-common-${os.name}.properties"/>
+
+	<!-- needed for compc -->
+	<import file="common/build-common-tasks.xml" />
+
+	
+	<target name="clean" description="Cleans the output directory">
+		<delete dir="${output.dir}"/>
+		<mkdir dir="${output.dir}"/>
+	</target>
+	
+	<target name="compile" description="Compile the bulkloader library">
+		<compc
+			name="${main}"
+			src.dir="${src.dir}"
+			output.dir="${output.dir}"
+			additional="-compiler.optimize -l ${core.lib}" />
+	</target>
+	
+</project>

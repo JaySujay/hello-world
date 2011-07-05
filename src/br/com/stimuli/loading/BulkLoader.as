@@ -960,6 +960,7 @@ package br.com.stimuli.loading {
         _loadNext();
         //evt.stopPropagation();
         //evt.currentTarget = item;
+	evt.text = evt.text + ' URL: ' + item.url.url;
         dispatchEvent(evt);
     }
 
