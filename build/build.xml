@@ -1,14 +1,15 @@
-<project name="bulkloader" basedir=".">
+<project name="bulkloader" xmlns:ivy="antlib:org.apache.ivy.ant"  basedir=".">
 
 	<property file="build.properties" /> 
 
 	<!-- needed by build-common-tasks.xml -->
-	<property file="common/build-common.properties"/>
-	<property file="common/build-common-${os.name}.properties"/>
+	<property file="../include/ant/build-common.properties"/>
+	<property file="../include/ant/build-common-${os.name}.properties"/>
 
 	<!-- needed for compc -->
-	<import file="common/build-common-tasks.xml" />
+	<import file="../include/ant/build-common-tasks.xml" />
 
+	<ivy:settings file="../include/ant/ivysettings.xml" /> 
 	
 	<target name="clean" description="Cleans the output directory">
 		<delete dir="${output.dir}"/>
@@ -16,11 +17,24 @@
 	</target>
 	
 	<target name="compile" description="Compile the bulkloader library">
+		<ivy:retrieve />
 		<compc
 			name="${main}"
 			src.dir="${src.dir}"
 			output.dir="${output.dir}"
-			additional="-compiler.optimize -l ${core.lib}" />
+			additional="-compiler.optimize -library-path+=lib/" />
 	</target>
 	
+	<target name="publish" description="Publish the compiled artifact to the ivy repository">
+		<ivy:retrieve />
+
+		<delete file="${output.dir}/ivy.xml"/>
+		
+		<ivy:publish artifactspattern="${output.dir}/[artifact].[ext]" 
+			resolver="local" 
+			status="release"
+			organisation="com.scholastic.setg"
+			module="bulk-loader"
+		/>
+	</target>
 </project>
