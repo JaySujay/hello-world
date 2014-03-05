@@ -1,5 +1,1 @@
-bin/
-.settings/
-build/lib/
-html-template/
-
+target/
