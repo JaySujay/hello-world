@@ -14,7 +14,7 @@
 		https://github.com/arthur-debert/BulkLoader
 		using com.scholastic as groupId to denote our fork
 	-->
-	<groupId>com.scholastic</groupId>
+	<groupId>com.scholastic.bulkloader</groupId>
 	<artifactId>BulkLoader</artifactId>
 	<!-- there doesnt seem to be any versioning associated with this project
 	old build used 2.0 so we'll stick with that -->
