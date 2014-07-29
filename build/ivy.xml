@@ -1,5 +1,5 @@
 <ivy-module version="2.0">
-    <info organisation="com.scholastic.setg" module="bulk-loader"/>
+    <info organisation="com.scholastic.setg" module="bulk-loader" revision="2.0"/>
 
     <publications>
     	<artifact	type="swc"	ext="swc" />
