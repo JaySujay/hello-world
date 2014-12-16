@@ -24,7 +24,7 @@
 		<flex.sdk.version>3.6.0.16995</flex.sdk.version>
 	</properties>
 	<scm>
-		<developerConnection>scm:git:git@github.com/ScholasticInc/nostromo_BulkLoader.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:ScholasticInc/nostromo_BulkLoader.git</developerConnection>
 	</scm>
 	<build>
 		<!--
