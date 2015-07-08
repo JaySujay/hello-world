@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>scholastic.superpom</groupId>
+		<artifactId>root</artifactId>
+		<version>1.0.5</version>
+		<relativePath />
+	</parent>
+	<!--
+		BulkLoader was originally an open source project 
+		https://github.com/arthur-debert/BulkLoader
+		using com.scholastic as groupId to denote our fork
+	-->
+	<groupId>com.scholastic.bulkloader</groupId>
+	<artifactId>BulkLoader</artifactId>
+	<!-- there doesnt seem to be any versioning associated with this project
+	old build used 2.0 so we'll stick with that -->
+	<version>2.1-SNAPSHOT</version>
+	<packaging>swc</packaging>
+	<properties>
+		<flex.sdk.version>3.6.0.16995</flex.sdk.version>
+	</properties>
+	<scm>
+		<developerConnection>scm:git:git@github.com:ScholasticInc/nostromo_BulkLoader.git</developerConnection>
+	</scm>
+	<build>
+		<!--
+		because this is a fork from a public repo
+		try to keep inline with the origins project structure
+		This will make merging in new changes much easier
+		-->
+		<sourceDirectory>src/</sourceDirectory>
+		<!--
+		Not running tests at the moment, need more work to correctly integrate
+		<testSourceDirectory>tests/src</testSourceDirectory>
+		-->
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.flexmojos</groupId>
+				<artifactId>flexmojos-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>com.adobe</groupId>
+			<artifactId>as3corelib</artifactId>
+			<version>0.93-unknown</version>
+			<type>swc</type>
+			<scope>merged</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.adobe.flex.framework</groupId>
+			<artifactId>flex-framework</artifactId>
+			<type>pom</type>
+		</dependency>
+	</dependencies>
+	
+</project>
