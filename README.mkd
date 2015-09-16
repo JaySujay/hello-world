@@ -1,4 +1,4 @@
-BulkLoader Jay is a minimal library written in Actionscript 3 (AS3) that aims to make loading and managing complex loading requirements easier and faster. BulkLoader takes a more dynamic, less architecture heavy approach. Few imports and making heavy use of AS3's dynamic capabilities, BulkLoader has a one-liner feel that doesn't get in your way.
+BulkLoader Jay1 is a minimal library written in Actionscript 3 (AS3) that aims to make loading and managing complex loading requirements easier and faster. BulkLoader takes a more dynamic, less architecture heavy approach. Few imports and making heavy use of AS3's dynamic capabilities, BulkLoader has a one-liner feel that doesn't get in your way.
 
 BulkLoader hides the complexity of loading different data types in AS3 and provides a unified interface for loading, accessing and events notification for different types of content.
 
